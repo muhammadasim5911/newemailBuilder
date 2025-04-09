@@ -1,0 +1,86 @@
+{
+  "name": "public-circles-email-builder",
+  "version": "0.1.0",
+  "description": "A drag-and-drop email template builder for Public Circles",
+  "author": "Public Circles",
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "template",
+    "builder",
+    "drag-and-drop",
+    "react",
+    "html-email"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/public-circles/email-builder"
+  },
+  "type": "module",
+  "main": "dist/public-circles-email-builder.umd.js",
+  "module": "dist/public-circles-email-builder.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/public-circles-email-builder.es.js",
+      "require": "./dist/public-circles-email-builder.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major",
+    "publish:npm": "npm publish"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-toast": "^1.1.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.263.1",
+    "nanoid": "^4.0.2",
+    "react": "^18.2.0",
+    "react-contenteditable": "^3.3.7",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.6",
+    "zustand": "^4.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.8",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.27",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
